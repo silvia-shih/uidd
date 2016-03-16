@@ -1,9 +1,9 @@
 
-
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<!--防止亂碼-->
+	<!--顯示中文-->
+	
 		<style type="text/css">
 		body { background-image:url(https://lh3.googleusercontent.com/-YH7YjRm0UY0/Vuka54TGiZI/AAAAAAAAJqI/RBbO--nFlRA_ibh1A7oUcJBT3PyU7xEGACCo/s912-Ic42/IMG_1164.JPG);
 		background-repeat:no-repeat;
@@ -13,17 +13,25 @@
 		#shop1{
 		background-color:#B3D9D9;
 		font-size:30px;
-		family-name："微軟正黑體", "Microsoft JhengHei";
+		family-name:"微軟正黑體", "Microsoft JhengHei";
 		font-weight:bolder;
 		position:absolute;top:510px;left:230px;
 		}
-		#shop2
+		#shop2{
 		background-color:#B3D9D9;
 		font-size:30px;
-		family-name："微軟正黑體", "Microsoft JhengHei"
+		family-name:"微軟正黑體", "Microsoft JhengHei";
 		font-weight:bolder;
 		position:absolute;top:400px;left:600px;
 		}
+		#talk{
+		font-size:20px;
+		family-name:"微軟正黑體", "Microsoft JhengHei";
+		display:none ;  
+		text-align:center;
+		}
+		
+		
 		
 
 		</style>
@@ -31,25 +39,30 @@
 		<script>
 		for (var i = 0; i < images.length; i++) 
 		{ var image = images[i], width = String(image.currentStyle.width); if (width.indexOf('%') == -1) { continue; } image.origWidth = image.offsetWidth; image.origHeight = image.offsetHeight; imgCache.push(image); c.ieAlpha(image); image.style.width = width; }
-		<!--讓背景圖片全螢幕化-->
+		<!--使背景圖片全螢幕化-->
 		</script>
 
 	</head>
 	<body>
-	
-		<button id="shop1" onmousedown="alert('4月開始咖啡第二件半價!!')">
-			
+		<div id="talk" style="width:200px;height:130px;
+		background-image:url(https://lh3.googleusercontent.com/-XPktWY8HbgY/VuklawdByHI/AAAAAAAAJqg/IxNfvZRqq_kIrnU2POMuDVHUZxJ2ssKRgCCo/s800-Ic42/talk.png)">
+			4月開始咖啡第二件半價!!<!--要修改-->
+		</div>
+		<button id="shop1" onmousedown="appear()">
 		誠鋪
-		
-		
 		</button>
 	
-		<button id="shop2" onmousedown="alert('天氣變熱了 老闆推新口味芋頭好吃~~~')">
+		<button id="shop2" onmousedown="alert('天氣變熱 新口味芋頭好好吃~~')">
 		江水號
 		
+			
 		
 		</button>
-		
+		<script>
+		function appear(){
+		document.getElementById('talk').style.display="inline";
+		}
+		</script>
 	</body>
 
 
